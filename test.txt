@@ -1,2 +1,0 @@
-a new test for git.
-another new test for git.
