@@ -1,3 +1,4 @@
 a new test for git.
 another new test for git.
 fixed a bug.
+fixed another bug.
