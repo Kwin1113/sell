@@ -1,5 +1,6 @@
 package com.kwin.service;
 
+import com.kwin.dto.CartDTO;
 import com.kwin.entity.ProductInfo;
 import org.springframework.data.domain.Page;
 
@@ -38,9 +39,11 @@ public interface ProductService {
     /**
      * 加库存
      */
+    void increaseStock(List<CartDTO> cartDTOList);
 
     /**
      * 减库存
      */
+    void decreaseStock(List<CartDTO> cartDTOList);
 
 }
