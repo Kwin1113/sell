@@ -1,6 +1,6 @@
 package com.kwin.dao;
 
-import com.kwin.dataobject.ProductCategory;
+import com.kwin.entity.ProductCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

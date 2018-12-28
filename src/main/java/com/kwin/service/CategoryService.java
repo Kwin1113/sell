@@ -1,6 +1,6 @@
 package com.kwin.service;
 
-import com.kwin.dataobject.ProductCategory;
+import com.kwin.entity.ProductCategory;
 
 import java.util.List;
 

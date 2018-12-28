@@ -1,7 +1,7 @@
 package com.kwin.service.impl;
 
 import com.kwin.dao.ProductCategoryDao;
-import com.kwin.dataobject.ProductCategory;
+import com.kwin.entity.ProductCategory;
 import com.kwin.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

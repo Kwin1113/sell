@@ -8,7 +8,7 @@ create table product_info(
 `category_type` int not null comment '类目编号',
 `create_time` timestamp not null default current_timestamp comment '创建时间',
 `update_time` timestamp not null default current_timestamp on update current_timestamp comment '修改时间',
-primary key `product_id`
+primary key (`product_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品表';
 
 create table `product_category`(
