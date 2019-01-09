@@ -17,3 +17,6 @@ server:
 #  file: /Users/kwin/workspace/sell.log
 #  level:
 #    com.kwin.LoggerTest: debug
+wechat:
+  mpAppId: wx731ec8eb23441f81
+  mpAppSecret: 3314b50048c547b6bdeb9dd0d54ab059
