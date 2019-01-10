@@ -1,8 +1,12 @@
 package com.kwin.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.kwin.entity.OrderDetail;
+import com.kwin.enums.OrderStatusEnum;
+import com.kwin.enums.PayStatusEnum;
+import com.kwin.util.EnumsUtil;
 import com.kwin.util.serializer.Date2LongSerializer;
 import lombok.Data;
 
@@ -47,4 +51,14 @@ public class OrderDTO {
     private Date updateTime;
 
     private List<OrderDetail> orderDetailList;
+
+    @JsonIgnore
+    public OrderStatusEnum getOrderStatusEnum() {
+        return EnumsUtil.getByCode(orderStatus, OrderStatusEnum.class);
+    }
+
+    @JsonIgnore
+    public PayStatusEnum getPayStatusEnum() {
+        return EnumsUtil.getByCode(payStatus, PayStatusEnum.class);
+    }
 }
