@@ -29,6 +29,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 @Service
@@ -88,9 +89,11 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public OrderDTO findOne(String orderId) {
-
-        OrderMaster orderMaster = masterDao.findById(orderId).get();
-        if (orderMaster == null) {
+        OrderMaster orderMaster = new OrderMaster();
+        try {
+            orderMaster = masterDao.findById(orderId).get();
+        } catch (NoSuchElementException e) {
+            log.error(e.getMessage(), e);
             throw new SellException(ResultEnum.ORDER_NOT_EXIST);
         }
         List<OrderDetail> orderDetailList = detailDao.findByOrderId(orderMaster.getOrderId());
